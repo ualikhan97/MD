@@ -1,0 +1,252 @@
+@font-face {
+   font-family: "Panton";
+   src: url("../fonts/Panton-Light/Panton-Light.eot");
+   src: url("../fonts/Panton-Light/Panton-Light.eot?#iefix")
+         format("embedded-opentype"),
+      url("../fonts/Panton-Light/Panton-Light.woff") format("woff"),
+      url("../fonts/Panton-Light/Panton-Light.ttf") format("truetype");
+   font-weight: 300;
+   font-style: normal;
+}
+@font-face {
+   font-family: "Panton";
+   src: url("../fonts/Panton-Regular/Panton-Regular.eot");
+   src: url("../fonts/Panton-Regular/Panton-Regular.eot?#iefix")
+         format("embedded-opentype"),
+      url("../fonts/Panton-Regular/Panton-Regular.woff") format("woff"),
+      url("../fonts/Panton-Regular/Panton-Regular.ttf") format("truetype");
+   font-weight: 400;
+   font-style: normal;
+}
+@font-face {
+   font-family: "Panton";
+   src: url("../fonts/Panton-Bold/Panton-Bold.eot");
+   src: url("../fonts/Panton-Bold/Panton-Bold.eot?#iefix")
+         format("embedded-opentype"),
+      url("../fonts/Panton-Bold/Panton-Bold.woff") format("woff"),
+      url("../fonts/Panton-Bold/Panton-Bold.ttf") format("truetype");
+   font-weight: 700;
+   font-style: normal;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   font-family: "Arial", sans-serif;
+   color: #fff;
+   font-weight: 400;
+   font-style: normal;
+   line-height: normal;
+   font-size: 24px;
+   margin: 0;
+   padding: 0;
+}
+
+li {
+   list-style-type: none;
+}
+
+a {
+   text-decoration: none;
+}
+
+.wrapper {
+   max-width: 1680px;
+   padding-left: 15px;
+   padding-right: 15px;
+   margin: 0 auto;
+}
+
+.header__wrapper {
+   height: 92px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.header__socials {
+   display: flex;
+   margin-left: 20px;
+
+   gap: 15px;
+}
+
+.header__link {
+   transition: transform 0.3s;
+}
+
+.header__link:hover {
+   transform: scale(1.2);
+}
+
+.header__menu {
+   margin-left: 20px;
+   margin-right: 30px;
+}
+
+.header__menu ul {
+   display: flex;
+   gap: 15px;
+}
+
+.header__menu ul li a {
+   font-family: "Roboto", sans-serif;
+   font-size: 15px;
+   color: #aaa;
+   transition: color 0.3s;
+}
+.header__menu ul li a:hover {
+   color: #525252;
+}
+.header__info {
+   display: flex;
+}
+
+.header__location {
+   display: flex;
+   gap: 9px;
+   margin-right: 19px;
+   align-items: center;
+}
+
+.header__schedule {
+   display: flex;
+   gap: 9px;
+   margin-right: 41px;
+   align-items: center;
+}
+
+.header__address {
+   font-size: 15px;
+   color: #474747;
+}
+
+.header__hours {
+   font-family: "Panton", sans-serif;
+   font-size: 15px;
+   color: #12354b;
+}
+
+.header__days {
+   font-family: "Panton", sans-serif;
+   font-size: 15px;
+   color: #909090;
+}
+
+.header__contacts {
+   display: flex;
+   gap: 10px;
+   align-items: center;
+}
+
+.header__phone {
+   display: flex;
+   gap: 10px;
+}
+
+.header__number {
+   font-size: 18px;
+   color: #3c3c3c;
+   font-weight: 700;
+   transition: color 0.3s;
+}
+
+.header__number:hover {
+   color: #000000;
+}
+
+.header__button {
+   width: 185px;
+   height: 41px;
+   font-family: "Roboto", sans-serif;
+   font-size: 15px;
+   color: inherit;
+   border-radius: 3px;
+   background: #38bcea;
+   border: none;
+   padding: 8px 12px;
+   cursor: pointer;
+   transition: background 0.3s;
+}
+.header__button:hover {
+   background: #0589b9;
+}
+
+.introduce {
+   background-image: url(../img/introduce/nurse.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   height: 628px;
+}
+
+.introduce__info {
+   max-width: 460px;
+   padding-top: 146px;
+}
+
+.introduce__pre-title {
+   color: #4e4e4e;
+   font-size: 20px;
+   margin-bottom: 18px;
+}
+
+.introduce__title {
+   color: #1a3444;
+   font-family: Panton;
+   font-size: 48px;
+   font-style: normal;
+   font-weight: 700;
+   margin-bottom: 17px;
+}
+
+.introduce__sub-title {
+   color: #6f6f6f;
+
+   font-size: 20px;
+   margin-bottom: 37px;
+}
+
+.btn {
+   padding: 14px 8px;
+   border-radius: 2px;
+   border: none;
+   background: #38bcea;
+   box-shadow: 0px 1px 9px 0px rgba(0, 0, 0, 0.2);
+   color: #fff;
+
+   font-family: Roboto;
+   font-size: 20px;
+   cursor: pointer;
+   font-weight: 400;
+   display: block;
+   transition: background 0.3s;
+}
+.btn:hover {
+   background: #0589b9;
+}
+
+.introduce__advantages-wrapper {
+   display: flex;
+   justify-content: center;
+   gap: 15px;
+   position: relative;
+   top: 41px;
+   background: rgba(255, 255, 255, 0.4);
+   backdrop-filter: blur(9.5px);
+}
+
+.introduce__advantages-text {
+   color: #4b4b4b;
+   max-width: 300px;
+   font-size: 18px;
+}
+
+.introduce__advantages {
+   height: 105px;
+   display: flex;
+   align-items: flex-end;
+   gap: 30px;
+}
