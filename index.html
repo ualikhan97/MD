@@ -16,67 +16,83 @@
       <header class="header">
          <div class="wrapper">
             <div class="header__wrapper">
-               <div href="#" class="header__logo">
-                  <img src="img/icons/logo.svg" alt="" />
-               </div>
-               <div class="header__socials">
-                  <a
-                     target="_blank"
-                     href="https://www.google.com/"
-                     class="header__link"
-                     ><img src="img/icons/google.svg" alt=""
-                  /></a>
-                  <a
-                     target="_blank"
-                     href="https://www.instagram.com/"
-                     class="header__link"
-                     ><img src="img/icons/instagram.svg" alt=""
-                  /></a>
-                  <a
-                     target="_blank"
-                     href="https://www.invisionapp.com/"
-                     class="header__link"
-                     ><img src="img/icons/invision.svg" alt=""
-                  /></a>
-               </div>
-               <nav class="header__menu">
-                  <ul>
-                     <li><a href="#">О нас</a></li>
-                     <li><a href="#">Услуги</a></li>
-                     <li><a href="#">Специалисты</a></li>
-                     <li><a href="#">Пациентам</a></li>
-                     <li><a href="#">Контакты</a></li>
-                  </ul>
-               </nav>
-               <div class="header__info">
-                  <div class="header__location">
-                     <div class="header__marker">
-                        <img src="img/icons/marker.svg" alt="" />
+               <div class="header__left">
+                  <div class="burger">
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                  </div>
+                  <div href="#" class="header__logo img-contain">
+                     <img src="img/icons/logo.svg" alt="" />
+                  </div>
+
+                  <div class="header__container">
+                     <div class="header__socials">
+                        <a
+                           target="_blank"
+                           href="https://www.google.com/"
+                           class="header__link img-contain"
+                           ><img src="img/icons/google.svg" alt=""
+                        /></a>
+                        <a
+                           target="_blank"
+                           href="https://www.instagram.com/"
+                           class="header__link img-contain"
+                           ><img src="img/icons/instagram.svg" alt=""
+                        /></a>
+                        <a
+                           target="_blank"
+                           href="https://www.invisionapp.com/"
+                           class="header__link img-contain"
+                           ><img src="img/icons/invision.svg" alt=""
+                        /></a>
                      </div>
-                     <div class="header__address">
-                        Чебоксары, Энтузиастов 1А
+
+                     <div class="header__shell">
+                        <nav class="header__menu">
+                           <ul>
+                              <li><a href="#" class="active">О нас</a></li>
+                              <li><a href="#">Услуги</a></li>
+                              <li><a href="#">Специалисты</a></li>
+                              <li><a href="#">Пациентам</a></li>
+                              <li><a href="#">Контакты</a></li>
+                           </ul>
+                        </nav>
+                     </div>
+
+                     <div class="header__info">
+                        <div class="header__location">
+                           <div class="header__marker">
+                              <img src="img/icons/marker.svg" alt="" />
+                           </div>
+                           <address class="header__address">
+                              Чебоксары, Энтузиастов 1А
+                           </address>
+                        </div>
+                        <div class="header__schedule">
+                           <div class="header__calendar">
+                              <img src="img/icons/calendar.svg" alt="" />
+                           </div>
+                           <div class="header__hours">с 09:00 - 20:00</div>
+                           <div class="header__days">пн-сб</div>
+                        </div>
+                     </div>
+                     <div class="header__contacts">
+                        <div class="header__phone">
+                           <img src="img/icons/phone.svg" alt="" />
+                           <a
+                              href="tel:+79003331040
+                  "
+                              class="header__number"
+                           >
+                              &#43;7900 333 10 40
+                           </a>
+                        </div>
+                        <button class="header__button">Заказать звонок</button>
                      </div>
                   </div>
-                  <div class="header__schedule">
-                     <div class="header__calendar">
-                        <img src="img/icons/calendar.svg" alt="" />
-                     </div>
-                     <div class="header__hours">с 09:00 - 20:00</div>
-                     <div class="header__days">пн-сб</div>
-                  </div>
                </div>
-               <div class="header__contacts">
-                  <div class="header__phone">
-                     <img src="img/icons/phone.svg" alt="" />
-                     <a
-                        href="tel:+7900 333 10 40
-               "
-                        class="header__number"
-                        >+7900 333 10 40
-                     </a>
-                  </div>
-                  <button class="header__button">Заказать звонок</button>
-               </div>
+               <!-- <div class="header__right"></div> -->
             </div>
          </div>
       </header>
@@ -94,7 +110,7 @@
                      Мы проведем полную консультацию, профессиональную гигиену
                      полости рта, лечение зубов и десен
                   </div>
-                  <button class="btn">Записаться на приём</button>
+                  <button class="btn btn-small">Записаться на приём</button>
                </div>
                <div class="introduce__advantages-wrapper">
                   <div class="introduce__advantages">
@@ -122,6 +138,73 @@
                         Удобное <br />
                         расположение
                      </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="services">
+         <div class="wrapper">
+            <div class="services__top">
+               <h2 class="services__title">Услуги</h2>
+            </div>
+            <div class="services__sub-title">
+               Мы постарались сделать прайс, максимально простым и понятным.
+            </div>
+            <div class="services__wrapper">
+               <div class="services__container">
+                  <div class="services__box">
+                     <div class="services__img">
+                        <img src="img/icons/1.svg" alt="" />
+                     </div>
+                     <div class="services__text">Лечение зубов</div>
+                     <div class="services__bar">
+                        <div class="services__arrow">
+                           <img src="img/icons/arrow.svg" alt="" />
+                        </div>
+                     </div>
+                  </div>
+                  <div class="services__box">
+                     <div class="services__img">
+                        <img src="img/icons/2.svg" alt="" />
+                     </div>
+                     <div class="services__text">Гигиена</div>
+                  </div>
+                  <div class="services__box">
+                     <div class="services__img">
+                        <img src="img/icons/3.svg" alt="" />
+                     </div>
+                     <div class="services__text">Брекеты</div>
+                  </div>
+                  <div class="services__box">
+                     <div class="services__img">
+                        <img src="img/icons/4.svg" alt="" />
+                     </div>
+                     <div class="services__text">Детская стоматология</div>
+                  </div>
+                  <div class="services__box">
+                     <div class="services__img">
+                        <img src="img/icons/5.svg" alt="" />
+                     </div>
+                     <div class="services__text">Импланты</div>
+                  </div>
+                  <div class="services__box">
+                     <div class="services__img">
+                        <img src="img/icons/6.svg" alt="" />
+                     </div>
+                     <div class="services__text">Виниры</div>
+                  </div>
+                  <div class="services__box">
+                     <div class="services__img">
+                        <img src="img/icons/7.svg" alt="" />
+                     </div>
+                     <div class="services__text">Коронки</div>
+                  </div>
+                  <div class="services__box">
+                     <div class="services__img">
+                        <img src="img/icons/8.svg" alt="" />
+                     </div>
+                     <div class="services__text">Хирургия</div>
                   </div>
                </div>
             </div>
