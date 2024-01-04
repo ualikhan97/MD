@@ -59,6 +59,29 @@ a {
    text-decoration: none;
 }
 
+.main {
+   overflow-x: hidden;
+}
+
+.btn {
+   padding: 14px 8px;
+   border-radius: 2px;
+   border: none;
+   background: #38bcea;
+   box-shadow: 0px 1px 9px 0px rgba(0, 0, 0, 0.2);
+   color: #fff;
+
+   font-family: Roboto;
+   font-size: 20px;
+   cursor: pointer;
+   font-weight: 400;
+   display: block;
+   transition: background 0.3s;
+}
+.btn:hover {
+   background: #0589b9;
+}
+
 .img-contain img {
    width: 100%;
    height: 100%;
@@ -66,7 +89,7 @@ a {
 }
 
 .wrapper {
-   max-width: 1680px;
+   max-width: 1690px;
    padding-left: 15px;
    padding-right: 15px;
    margin: 0 auto;
@@ -114,8 +137,8 @@ a {
 }
 
 .header {
-   padding-top: 30px;
-   padding-bottom: 30px;
+   padding-top: 28px;
+   padding-bottom: 28px;
 }
 
 .header__wrapper {
@@ -135,10 +158,16 @@ a {
    height: 52px;
 }
 
+.header__con {
+   display: flex;
+   align-items: center;
+   gap: 20px;
+}
+
 .header__container {
    display: flex;
    align-items: center;
-   margin-left: 55px;
+   margin-left: 58px;
 }
 
 .header__socials {
@@ -159,7 +188,7 @@ a {
 }
 
 .header__menu {
-   margin-left: 70px;
+   margin-left: 72px;
 }
 
 .header__menu ul {
@@ -180,7 +209,7 @@ a {
 }
 .header__info {
    display: flex;
-   margin-left: 95px;
+   margin-left: 97px;
 }
 
 .header__location {
@@ -238,14 +267,14 @@ a {
 
 .header__contacts {
    display: flex;
-   gap: 24px;
+   gap: 41px;
    align-items: center;
 }
 
 .header__phone {
    display: flex;
    align-items: center;
-   gap: 5px;
+   gap: 6px;
 }
 
 .header__number {
@@ -261,15 +290,13 @@ a {
 }
 
 .header__button {
-   width: 185px;
-   height: 41px;
    font-family: "Roboto", sans-serif;
    font-size: 15px;
    color: inherit;
    border-radius: 3px;
    background: #38bcea;
    border: none;
-   padding: 8px 12px;
+   padding: 11px 34px;
    cursor: pointer;
    transition: background 0.3s;
 }
@@ -317,7 +344,7 @@ a {
 .introduce__pre-title {
    color: #4e4e4e;
    font-size: 20px;
-   margin-bottom: 18px;
+   margin-bottom: 19px;
 }
 
 .introduce__title {
@@ -326,7 +353,10 @@ a {
    font-size: 48px;
    font-style: normal;
    font-weight: 700;
-   margin-bottom: 17px;
+   margin-bottom: 26px;
+   line-height: 104.188%;
+   max-width: 350px;
+   letter-spacing: -0.6px;
 }
 
 .introduce__sub-title {
@@ -336,23 +366,8 @@ a {
    margin-bottom: 37px;
 }
 
-.btn {
-   padding: 14px 8px;
-   border-radius: 2px;
-   border: none;
-   background: #38bcea;
-   box-shadow: 0px 1px 9px 0px rgba(0, 0, 0, 0.2);
-   color: #fff;
-
-   font-family: Roboto;
-   font-size: 20px;
-   cursor: pointer;
-   font-weight: 400;
-   display: block;
-   transition: background 0.3s;
-}
-.btn:hover {
-   background: #0589b9;
+.introduce__btn {
+   padding: 18px 48px;
 }
 
 .introduce__advantages-wrapper {
@@ -360,9 +375,9 @@ a {
    justify-content: center;
    gap: 15px;
    position: relative;
-   top: 36px;
+   top: 77px;
 }
-.introduce__advantages-wrapper::after {
+/* .introduce__advantages-wrapper::after {
    content: "";
    position: absolute;
    width: 500px;
@@ -372,22 +387,41 @@ a {
    background: rgba(255, 255, 255, 0.4);
    backdrop-filter: blur(9.5px);
    z-index: -1;
-}
+} */
 
 .introduce__advantages-text {
    color: #4b4b4b;
-   max-width: 300px;
+   max-width: 260px;
    font-size: 18px;
 }
 
 .introduce__advantages {
    display: flex;
    align-items: flex-end;
-   gap: 30px;
-   padding: 35px;
+   gap: 28px;
+   padding: 28px;
    background: rgba(255, 255, 255, 0.4);
    backdrop-filter: blur(9.5px);
    min-width: 368px;
+}
+
+.introduce__advantages:last-child {
+   position: relative;
+   z-index: 10;
+   background: transparent;
+   backdrop-filter: none;
+}
+
+.introduce__advantages:last-child::after {
+   content: "";
+   position: absolute;
+   width: 42vw;
+   height: 100%;
+   top: 0;
+   left: 0;
+   background: rgba(255, 255, 255, 0.4);
+   backdrop-filter: blur(9.5px);
+   z-index: -1;
 }
 
 /* .introduce__advantages-wrapper
@@ -422,7 +456,7 @@ a {
 }
 
 .services {
-   margin-top: 76px;
+   margin-top: 159px;
 }
 
 .services__top {
@@ -453,48 +487,70 @@ a {
    display: flex;
    justify-content: center;
    flex-wrap: wrap;
-   gap: 35px;
+   gap: 35px 40px;
 }
 
 .services__box {
-   width: 297px;
+   width: calc(20% - 32px);
    height: 236px;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   background-color: #f5f5f5;
-   gap: 20px;
+   background-color: #fbfbfb;
+   gap: 29px;
+   transition: all 0.3s;
+   position: relative;
+   border-radius: 4px;
 }
-.services__box:first-child {
+.services__box:hover {
+   cursor: pointer;
    background-color: #38bcea;
+   padding-bottom: 47px;
    filter: drop-shadow(0px 20px 50px rgba(165, 165, 165, 0.2));
 }
-.services__box:first-child .services__text {
+
+.services__box:hover .services__text {
    color: #fff;
 }
+.services__box:hover .services__img svg {
+   stroke: #fff;
+}
 
+.services__container:first-child .services__box:first-child .services__img svg {
+   stroke: #38bcea;
+}
+.services__container:first-child
+   .services__box:first-child:hover
+   .services__img
+   svg {
+   stroke: white;
+}
 .services__text {
    color: #454545;
    font-family: Panton;
    font-size: 26px;
    font-weight: 700;
+   text-align: center;
 }
 
 .services__bar {
    height: 47px;
    background-color: #fcfcfc;
    width: 100%;
-   position: relative;
-   top: 25px;
+   position: absolute;
+   bottom: 0px;
    display: flex;
    justify-content: center;
    align-items: center;
-   transition: background-color 0.3s;
+   transition: all 0.3s;
+   opacity: 0;
 }
-.services__bar:hover {
+
+.services__box:hover .services__bar {
    cursor: pointer;
-   background-color: #838181;
+   background-color: #fcfcfc;
+   opacity: 1;
 }
 
 .servicess__shell {
@@ -564,7 +620,7 @@ a {
    }
 
    .header__socials {
-      gap: 15px;
+      gap: 16px;
    }
 
    .header__menu {
@@ -618,31 +674,45 @@ a {
       width: 100%;
       margin-bottom: 10px;
    } */
-   .header__container .header__info,
-   .header__container .header__contacts {
+   .header__container .header__info {
       display: none;
    }
 
    .header__left {
       width: 100%;
-      justify-content: space-evenly;
+      justify-content: space-between;
+   }
+
+   .header__container {
+      flex: 1;
+      justify-content: space-between;
+   }
+}
+
+@media (max-width: 1450px) {
+   .services__box {
+      width: calc(30% - 15px);
    }
 }
 
 @media (max-width: 1100px) {
+   .header__socials {
+      display: none;
+   }
    .introduce {
       background-image: none;
    }
 
    .introduce__wrapper {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
    }
 
    .introduce__advantages-wrapper {
       display: flex;
-      flex-direction: column;
-      padding-top: 100px;
+
+      padding-top: 5px;
+      gap: 5px;
    }
 
    .introduce__info {
@@ -650,9 +720,10 @@ a {
    }
 
    .introduce__advantages {
-      padding: 25px;
+      padding: 10px;
       display: flex;
       align-items: center;
+      min-width: 33%;
    }
 
    br {
@@ -665,7 +736,7 @@ a {
    }
 
    .introduce__advantages-text {
-      font-size: 24px;
+      font-size: 17px;
    }
 
    .introduce__advantages-wrapper::after {
@@ -683,9 +754,64 @@ a {
    .services__container {
       gap: 30px;
    }
+}
 
-   .services__bar {
-      top: 26px;
+@media (max-width: 1020px) {
+   .burger {
+      display: flex;
+      top: 2px;
+      position: relative;
+      z-index: 1001;
+   }
+   .header__shell {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: white;
+      display: flex;
+      flex-wrap: wrap;
+      z-index: 1000;
+      transform: translateX(-100%);
+      transition: all 0.3s;
+      padding: 80px 15px 24px;
+      align-content: flex-start;
+      order: 1;
+   }
+
+   .header__shell.active {
+      transform: translateX(0%);
+      transition: all 0.3s;
+   }
+
+   .header__menu {
+      margin-left: 0;
+   }
+
+   .header__menu ul {
+      gap: 30px;
+      display: flex;
+      flex-direction: column;
+   }
+
+   .header__menu ul li a {
+      font-size: 17px;
+      color: #396fda;
+   }
+
+   .header__container {
+      flex: none;
+   }
+
+   .header__contacts {
+      gap: 15px;
+   }
+}
+
+@media (max-width: 862px) {
+   .introduce__advantages-wrapper {
+      flex-direction: column;
    }
 }
 
@@ -703,16 +829,24 @@ a {
       display: flex;
       align-items: flex-end;
    }
+
+   .services__box {
+      width: calc(40% - -10px);
+   }
+
+   .services__bar {
+      height: 42px;
+   }
 }
 @media (max-width: 768px) {
-   .burger {
+   /* .burger {
       display: flex;
       top: 2px;
       position: relative;
       z-index: 1001;
-   }
+   } */
 
-   .header__shell {
+   /* .header__shell {
       position: fixed;
       top: 0;
       left: 0;
@@ -747,15 +881,15 @@ a {
    .header__menu ul li a {
       font-size: 17px;
       color: #396fda;
-   }
+   } */
 
    .header__left {
       justify-content: space-between;
    }
 
-   .header__logo {
+   /* .header__logo {
       display: none;
-   }
+   } */
 
    .introduce::before,
    .introduce::after {
@@ -849,10 +983,6 @@ a {
       height: 205px;
    }
 
-   .services__bar {
-      top: 11px;
-   }
-
    .services__name {
       font-size: 20px;
    }
@@ -895,6 +1025,37 @@ a {
 
    .services__title {
       font-size: 35px;
+   }
+}
+
+@media (max-width: 530px) {
+   .header__con {
+      width: 100%;
+      justify-content: space-between;
+   }
+   /* .header__contacts {
+      display: none;
+   } */
+
+   .header {
+      padding-top: 10px;
+      padding-bottom: 15px;
+   }
+
+   .introduce__info {
+      padding-top: 35px;
+   }
+
+   .header__logo {
+      display: none;
+   }
+
+   .header__contacts .header__phone {
+      display: none;
+   }
+
+   .header__button {
+      padding: 10px 20px;
    }
 }
 
@@ -961,8 +1122,8 @@ a {
       font-size: 17px;
    }
 
-   .services__bar {
-      top: 0;
+   .services__box {
+      gap: 15px;
    }
 }
 
@@ -996,10 +1157,6 @@ a {
       gap: 18px;
    }
 
-   .services__bar {
-      top: -1px;
-   }
-
    .services__name {
       font-size: 18px;
    }
@@ -1015,5 +1172,10 @@ a {
 
    .servicess__shell {
       gap: 15px;
+   }
+
+   .services__box {
+      gap: 10px;
+      height: 165px;
    }
 }
