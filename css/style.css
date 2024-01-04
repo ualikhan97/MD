@@ -492,7 +492,7 @@ h5 {
 
 .services__wrapper {
    margin-top: 70px;
-   margin-bottom: 70px;
+   margin-bottom: 118.5px;
 }
 
 .services__container {
@@ -605,6 +605,73 @@ h5 {
    text-align: center;
    font-size: 24px;
    font-weight: 700;
+}
+
+.trust {
+   background: #fbfbfb;
+}
+
+.trust__top {
+   padding-top: 124px;
+   padding-bottom: 60px;
+}
+
+.trust__title {
+   color: #272727;
+   font-family: Panton;
+   font-size: 48px;
+   /* max-width: 543px; */
+   font-weight: 700;
+}
+
+.trust__number {
+   color: #38bcea;
+   font-family: Panton;
+   font-size: 48px;
+
+   font-weight: 400;
+}
+
+.trust__caption {
+   color: #222;
+   font-family: Panton;
+   font-size: 36px;
+
+   max-width: 422px;
+   font-weight: 700;
+}
+
+.trust__wrapper {
+   display: flex;
+   gap: 37px;
+   padding-bottom: 124px;
+}
+
+.trust__box {
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+   border-radius: 4px;
+   background: #fff;
+   /*
+   padding-top: 58px;
+   padding-left: 37px;
+   padding-bottom: 58px;
+   padding-right: 26px; */
+   padding-top: 35px;
+   padding-left: 29px;
+   padding-bottom: 35px;
+   padding-right: 11px;
+   width: 33.333%;
+}
+
+.trust__sub-caption {
+   max-width: 487px;
+   color: #292929;
+   font-family: Arial;
+   font-size: 24px;
+
+   font-weight: 400;
 }
 
 @media (max-width: 1730px) {
@@ -723,8 +790,10 @@ h5 {
    .introduce__advantages-wrapper {
       display: flex;
 
-      padding-top: 5px;
+      /* padding-top: 5px; */
       gap: 5px;
+      top: 0;
+      margin-top: 50px;
    }
 
    .introduce__info {
@@ -736,6 +805,8 @@ h5 {
       display: flex;
       align-items: center;
       min-width: 33%;
+      background: transparent;
+      backdrop-filter: none;
    }
 
    br {
@@ -753,6 +824,9 @@ h5 {
 
    .introduce__advantages-wrapper::after {
       content: none;
+   }
+   .services {
+      margin-top: 100px;
    }
 
    .services__sub-title {
@@ -819,11 +893,15 @@ h5 {
    .header__contacts {
       gap: 15px;
    }
-}
 
-@media (max-width: 862px) {
-   .introduce__advantages-wrapper {
-      flex-direction: column;
+   .trust__wrapper {
+      flex-wrap: wrap;
+      gap: 15px;
+   }
+
+   .trust__box {
+      width: 100%;
+      padding-left: 0;
    }
 }
 
@@ -837,9 +915,13 @@ h5 {
    }
 
    .introduce__advantages {
-      padding: 25px;
+      padding: 25px 25px 25px 0;
       display: flex;
       align-items: flex-end;
+   }
+
+   .services__title {
+      font-size: 40px;
    }
 
    .services__box {
@@ -848,6 +930,24 @@ h5 {
 
    .services__bar {
       height: 42px;
+   }
+
+   .trust__title {
+      font-size: 40px;
+   }
+}
+
+@media (max-width: 862px) {
+   .introduce__advantages-wrapper {
+      flex-direction: column;
+   }
+
+   .services {
+      margin-top: 60px;
+   }
+
+   .introduce__advantages {
+      min-width: 100%;
    }
 }
 @media (max-width: 768px) {
@@ -981,6 +1081,38 @@ h5 {
       font-size: 22px;
       padding: 16px 24px;
    }
+
+   .trust__title {
+      font-size: 37px;
+   }
+
+   .trust__caption {
+      font-size: 32px;
+   }
+
+   .trust__sub-caption {
+      font-size: 18px;
+   }
+
+   .trust__number {
+      font-size: 37px;
+   }
+
+   .trust__top {
+      padding-top: 60px;
+      padding-bottom: 60px;
+   }
+
+   .trust__top {
+      padding-top: 50px;
+      padding-bottom: 50px;
+   }
+
+   .trust__box {
+      padding-top: 25px;
+
+      padding-bottom: 25px;
+   }
 }
 
 @media (max-width: 654px) {
@@ -1038,6 +1170,18 @@ h5 {
    .services__title {
       font-size: 35px;
    }
+
+   .services {
+      margin-top: 50px;
+   }
+
+   .trust__title {
+      font-size: 35px;
+   }
+
+   .trust__caption {
+      font-size: 30px;
+   }
 }
 
 @media (max-width: 530px) {
@@ -1056,6 +1200,10 @@ h5 {
 
    .introduce__info {
       padding-top: 35px;
+   }
+
+   .introduce__advantages-wrapper {
+      margin-top: 35px;
    }
 
    .header__logo {
@@ -1113,12 +1261,17 @@ h5 {
       width: 100%;
    }
 
+   .services {
+      margin-top: 40px;
+   }
+
    .services__text {
       font-size: 21px;
    }
 
    .services__box {
       height: 170px;
+      gap: 15px;
    }
 
    .services__wrapper {
@@ -1134,12 +1287,36 @@ h5 {
       font-size: 17px;
    }
 
-   .services__box {
-      gap: 15px;
+   .trust__title {
+      font-size: 30px;
+   }
+
+   .trust__top {
+      padding-top: 40px;
+      padding-bottom: 40px;
+   }
+
+   .trust__caption {
+      font-size: 25px;
+   }
+
+   .trust__sub-caption {
+      font-size: 17px;
+   }
+   .trust__box {
+      padding-top: 10px;
+      padding-bottom: 10px;
+   }
+
+   .trust__number {
+      font-size: 30px;
    }
 }
 
 @media (max-width: 376px) {
+   .header__button {
+      font-size: 13px;
+   }
    .introduce__pre-title {
       font-size: 15px;
       margin-bottom: 12px;
@@ -1189,5 +1366,60 @@ h5 {
    .services__box {
       gap: 10px;
       height: 165px;
+   }
+
+   .trust__title {
+      font-size: 27px;
+   }
+
+   .trust__caption {
+      font-size: 23px;
+   }
+
+   .trust__sub-caption {
+      font-size: 16px;
+   }
+
+   .trust__wrapper {
+      flex-wrap: wrap;
+      gap: 12px;
+   }
+
+   .trust__number {
+      font-size: 27px;
+   }
+}
+
+@media (max-width: 321px) {
+   .header__button {
+      padding: 8px 12px;
+   }
+
+   .header {
+      padding-top: 7px;
+      padding-bottom: 10px;
+   }
+
+   .introduce__info {
+      padding-top: 30px;
+   }
+
+   .introduce__title,
+   .services__title,
+   .trust__title {
+      font-size: 25px;
+   }
+
+   .trust__sub-caption {
+      font-size: 15px;
+   }
+
+   .trust__top {
+      padding-top: 30px;
+      padding-bottom: 30px;
+   }
+
+   .trust__number {
+      font-size: 25px;
    }
 }
