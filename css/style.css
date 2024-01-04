@@ -59,6 +59,14 @@ a {
    text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+   margin: 0;
+}
+
 .main {
    overflow-x: hidden;
 }
@@ -347,13 +355,17 @@ a {
    margin-bottom: 19px;
 }
 
+.introduce__top {
+   margin-bottom: 26px;
+}
+
 .introduce__title {
    color: #1a3444;
    font-family: Panton;
    font-size: 48px;
    font-style: normal;
    font-weight: 700;
-   margin-bottom: 26px;
+
    line-height: 104.188%;
    max-width: 350px;
    letter-spacing: -0.6px;
