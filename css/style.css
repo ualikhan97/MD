@@ -213,7 +213,7 @@ h5 {
 
 .header__menu ul li a.active,
 .header__menu ul li a:hover {
-   color: #525252;
+   color: #01678a;
 }
 .header__info {
    display: flex;
@@ -279,6 +279,10 @@ h5 {
    align-items: center;
 }
 
+.header__contacts-active {
+   display: none;
+}
+
 .header__phone {
    display: flex;
    align-items: center;
@@ -317,7 +321,7 @@ h5 {
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
-
+   padding-top: 146px;
    position: relative;
    z-index: 10;
 }
@@ -346,7 +350,6 @@ h5 {
 
 .introduce__info {
    max-width: 460px;
-   padding-top: 146px;
 }
 
 .introduce__pre-title {
@@ -469,6 +472,7 @@ h5 {
 
 .services {
    margin-top: 159px;
+   margin-bottom: 118.5px;
 }
 
 .services__top {
@@ -492,7 +496,6 @@ h5 {
 
 .services__wrapper {
    margin-top: 70px;
-   margin-bottom: 118.5px;
 }
 
 .services__container {
@@ -522,22 +525,24 @@ h5 {
    filter: drop-shadow(0px 20px 50px rgba(165, 165, 165, 0.2));
 }
 
+.services__box.active-box {
+   background-color: #38bcea;
+}
+
+.services__box.active-box .services__img svg {
+   stroke: #fff;
+}
+.services__box.active-box .services__text {
+   color: #fff;
+}
+
 .services__box:hover .services__text {
    color: #fff;
 }
-.services__box:hover .services__img svg {
-   stroke: #fff;
+.services__box:hover .services__img svg * {
+   fill: #fff;
 }
 
-.services__container:first-child .services__box:first-child .services__img svg {
-   stroke: #38bcea;
-}
-.services__container:first-child
-   .services__box:first-child:hover
-   .services__img
-   svg {
-   stroke: white;
-}
 .services__text {
    color: #454545;
    font-family: Panton;
@@ -609,10 +614,11 @@ h5 {
 
 .trust {
    background: #fbfbfb;
+   padding-top: 124px;
+   padding-bottom: 124px;
 }
 
 .trust__top {
-   padding-top: 124px;
    padding-bottom: 60px;
 }
 
@@ -643,8 +649,8 @@ h5 {
 
 .trust__wrapper {
    display: flex;
+   flex-wrap: wrap;
    gap: 37px;
-   padding-bottom: 124px;
 }
 
 .trust__box {
@@ -662,7 +668,7 @@ h5 {
    padding-left: 29px;
    padding-bottom: 35px;
    padding-right: 11px;
-   width: 33.333%;
+   width: calc(33.333% - 25px);
 }
 
 .trust__sub-caption {
@@ -672,6 +678,103 @@ h5 {
    font-size: 24px;
 
    font-weight: 400;
+}
+
+.contact-number {
+   background: #fff;
+}
+
+.contact-number__shell {
+   margin-top: 135px;
+   margin-bottom: 150px;
+   background: linear-gradient(84deg, #e6f2ff 0%, #faf1ed 100%);
+}
+
+.contact-number__top {
+   padding-top: 62.5px;
+   margin-bottom: 39.4px;
+}
+
+.contact-number__title {
+   color: #000;
+   font-family: Panton;
+   font-size: 48px;
+   max-width: 899px;
+   font-weight: 700;
+}
+.contact-number__sub-title {
+   color: #262626;
+   max-width: 533px;
+   font-size: 24px;
+   margin-bottom: 37.5px;
+   font-weight: 400;
+   line-height: 130.49%;
+}
+
+.contact-number__wrapper {
+   display: flex;
+}
+
+.contact-number__left {
+   display: flex;
+   flex-direction: column;
+   /* flex: 1; */
+}
+.contact-number__link {
+   color: #0079ff;
+
+   font-size: 24px;
+
+   font-weight: 400;
+   line-height: 130.49%;
+}
+
+.contact-number__phone {
+   display: flex;
+   gap: 20px;
+   margin-bottom: 32.6px;
+}
+
+.contact-number__inp {
+   border-radius: 5px;
+   background: #fefefe;
+   padding: 20px 105px 20px 27px;
+   border: none;
+}
+
+.contact-number__personal-data {
+   color: #4e4e4e;
+
+   font-size: 18px;
+   padding-bottom: 62.5px;
+   font-weight: 400;
+   line-height: 130.49%; /* 23.488px */
+   max-width: 493px;
+}
+.contact-number__personal-data span {
+   color: #4e4e4e;
+
+   font-size: 18px;
+
+   font-weight: 400;
+   line-height: 130.49%;
+   text-decoration-line: underline;
+}
+
+.contact-number__btn {
+   padding: 20px 34px;
+}
+
+.contact-number__dentist {
+   /* width: 752px;
+   height: 752px; */
+   position: relative;
+   /* bottom: 135px; */
+}
+.contact-number__dentist img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
 }
 
 @media (max-width: 1730px) {
@@ -774,12 +877,31 @@ h5 {
    }
 }
 
+@media (max-width: 1250px) {
+   .contact-number__dentist {
+      display: none;
+   }
+}
+
 @media (max-width: 1100px) {
    .header__socials {
       display: none;
    }
-   .introduce {
+   /* .introduce {
       background-image: none;
+   } */
+
+   .introduce::after {
+      display: none;
+   }
+
+   .introduce::before {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.4);
+   }
+
+   .introduce__advantages:last-child::after {
+      display: none;
    }
 
    .introduce__wrapper {
@@ -796,7 +918,7 @@ h5 {
       margin-top: 50px;
    }
 
-   .introduce__info {
+   .introduce {
       padding-top: 100px;
    }
 
@@ -869,6 +991,8 @@ h5 {
    .header__shell.active {
       transform: translateX(0%);
       transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
    }
 
    .header__menu {
@@ -876,14 +1000,14 @@ h5 {
    }
 
    .header__menu ul {
-      gap: 30px;
+      gap: 15px;
       display: flex;
       flex-direction: column;
    }
 
    .header__menu ul li a {
       font-size: 17px;
-      color: #396fda;
+      color: #aaa;
    }
 
    .header__container {
@@ -892,6 +1016,10 @@ h5 {
 
    .header__contacts {
       gap: 15px;
+   }
+
+   .services {
+      margin-bottom: 70px;
    }
 
    .trust__wrapper {
@@ -903,6 +1031,16 @@ h5 {
       width: 100%;
       padding-left: 0;
    }
+
+   .trust {
+      padding-top: 100px;
+      padding-bottom: 100px;
+   }
+
+   .contact-number__shell {
+      margin-top: 90px;
+      margin-bottom: 110px;
+   }
 }
 
 @media (max-width: 890px) {
@@ -911,7 +1049,7 @@ h5 {
    }
 
    .introduce__advantages-text {
-      font-size: 18px;
+      font-size: 16px;
    }
 
    .introduce__advantages {
@@ -938,16 +1076,22 @@ h5 {
 }
 
 @media (max-width: 862px) {
-   .introduce__advantages-wrapper {
+   /* .introduce__advantages-wrapper {
       flex-direction: column;
-   }
+   } */
 
    .services {
       margin-top: 60px;
+      margin-bottom: 60px;
    }
 
-   .introduce__advantages {
+   /* .introduce__advantages {
       min-width: 100%;
+   } */
+
+   .trust {
+      padding-top: 80px;
+      padding-bottom: 80px;
    }
 }
 @media (max-width: 768px) {
@@ -1003,9 +1147,12 @@ h5 {
       display: none;
    } */
 
-   .introduce::before,
    .introduce::after {
       content: none;
+   }
+
+   .introduce__advantages-wrapper {
+      gap: 0px;
    }
 
    .introduce__wrapper {
@@ -1029,6 +1176,9 @@ h5 {
    .introduce__info {
       max-width: none;
       display: block;
+   }
+
+   .introduce {
       padding-top: 50px;
    }
 
@@ -1037,7 +1187,7 @@ h5 {
    }
 
    .introduce__advantages-text {
-      font-size: 20px;
+      font-size: 16px;
       /* width: 100%; */
    }
 
@@ -1082,6 +1232,11 @@ h5 {
       padding: 16px 24px;
    }
 
+   .trust {
+      padding-top: 60px;
+      padding-bottom: 60px;
+   }
+
    .trust__title {
       font-size: 37px;
    }
@@ -1099,19 +1254,55 @@ h5 {
    }
 
    .trust__top {
-      padding-top: 60px;
       padding-bottom: 60px;
-   }
-
-   .trust__top {
-      padding-top: 50px;
-      padding-bottom: 50px;
    }
 
    .trust__box {
       padding-top: 25px;
 
       padding-bottom: 25px;
+   }
+
+   .contact-number__title {
+      font-size: 37px;
+   }
+
+   .contact-number__sub-title {
+      font-size: 18px;
+   }
+
+   .contact-number__link {
+      font-size: 18px;
+   }
+
+   .contact-number__personal-data {
+      font-size: 16px;
+   }
+
+   .contact-number__inp {
+      border-radius: 5px;
+      background: #fefefe;
+      padding: 20px 60px 20px 27px;
+      border: none;
+   }
+
+   .contact-number__personal-data span {
+      font-size: 16px;
+   }
+
+   .contact-number__shell {
+      margin-top: 50px;
+      margin-bottom: 60px;
+   }
+}
+
+@media (max-width: 682px) {
+   .introduce__advantages-wrapper {
+      flex-direction: column;
+   }
+
+   .introduce {
+      padding-bottom: 50px;
    }
 }
 
@@ -1161,7 +1352,7 @@ h5 {
    }
 
    .introduce__advantages-text {
-      font-size: 18px;
+      font-size: 16px;
    }
    .introduce__advantages {
       gap: 20px;
@@ -1175,6 +1366,28 @@ h5 {
       margin-top: 50px;
    }
 
+   .btn-serv {
+      font-size: 16px;
+      padding: 9px 22px;
+   }
+
+   .services__cont {
+      gap: 10px;
+   }
+
+   .services__price-container {
+      padding: 15px;
+   }
+
+   .servicess__shell {
+      gap: 10px;
+   }
+
+   .trust {
+      padding-top: 50px;
+      padding-bottom: 50px;
+   }
+
    .trust__title {
       font-size: 35px;
    }
@@ -1182,12 +1395,31 @@ h5 {
    .trust__caption {
       font-size: 30px;
    }
+
+   .trust__top {
+      padding-bottom: 40px;
+   }
+
+   .contact-number__title {
+      font-size: 35px;
+   }
+
+   .contact-number__inp {
+      padding: 20px 20px 20px 20px;
+   }
+}
+
+@media (max-width: 546px) {
+   .contact-number__phone {
+      flex-direction: column;
+   }
 }
 
 @media (max-width: 530px) {
    .header__con {
       width: 100%;
       justify-content: space-between;
+      flex-direction: row-reverse;
    }
    /* .header__contacts {
       display: none;
@@ -1198,7 +1430,7 @@ h5 {
       padding-bottom: 15px;
    }
 
-   .introduce__info {
+   .introduce {
       padding-top: 35px;
    }
 
@@ -1206,16 +1438,20 @@ h5 {
       margin-top: 35px;
    }
 
-   .header__logo {
+   .header__contacts {
       display: none;
    }
 
-   .header__contacts .header__phone {
-      display: none;
+   .header__contacts-active {
+      display: flex;
+      flex-direction: column;
+      margin-top: 15px;
+      gap: 15px;
    }
 
    .header__button {
       padding: 10px 20px;
+      align-self: flex-start;
    }
 }
 
@@ -1224,12 +1460,13 @@ h5 {
       padding-top: 10px;
       padding-bottom: 15px;
    }
+
+   .introduce {
+      background-position: 30%;
+      padding-top: 50px;
+   }
    .introduce__title {
       font-size: 30px;
-   }
-
-   .introduce__info {
-      padding-top: 50px;
    }
 
    .introduce__pre-title {
@@ -1287,13 +1524,17 @@ h5 {
       font-size: 17px;
    }
 
+   .trust {
+      padding-top: 30px;
+      padding-bottom: 30px;
+   }
+
    .trust__title {
       font-size: 30px;
    }
 
    .trust__top {
-      padding-top: 40px;
-      padding-bottom: 40px;
+      padding-bottom: 15px;
    }
 
    .trust__caption {
@@ -1304,12 +1545,49 @@ h5 {
       font-size: 17px;
    }
    .trust__box {
-      padding-top: 10px;
-      padding-bottom: 10px;
+      padding: 10px 15px;
    }
 
    .trust__number {
       font-size: 30px;
+   }
+
+   .contact-number__title {
+      font-size: 30px;
+   }
+
+   .contact-number__sub-title {
+      font-size: 17px;
+   }
+
+   .contact-number__link {
+      font-size: 17px;
+   }
+
+   .contact-number__personal-data {
+      font-size: 15px;
+   }
+
+   .contact-number__top {
+      padding-top: 20.5px;
+      margin-bottom: 20.4px;
+   }
+
+   .contact-number__sub-title {
+      margin-bottom: 23.5px;
+   }
+
+   .contact-number__personal-data {
+      padding-bottom: 30.5px;
+   }
+
+   .contact-number__btn {
+      padding: 10px 34px;
+      font-size: 16px;
+   }
+
+   .contact-number__inp {
+      padding: 15px 20px 15px 20px;
    }
 }
 
@@ -1373,7 +1651,7 @@ h5 {
    }
 
    .trust__caption {
-      font-size: 23px;
+      font-size: 20px;
    }
 
    .trust__sub-caption {
@@ -1386,7 +1664,34 @@ h5 {
    }
 
    .trust__number {
+      font-size: 20px;
+   }
+
+   .contact-number__title {
       font-size: 27px;
+   }
+
+   .contact-number__sub-title,
+   .contact-number__link {
+      font-size: 16px;
+   }
+
+   .contact-number__personal-data,
+   .contact-number__personal-data span {
+      font-size: 14px;
+   }
+
+   .contact-number__personal-data {
+      padding-bottom: 21.5px;
+   }
+
+   .contact-number__phone {
+      gap: 15px;
+      margin-bottom: 20.6px;
+   }
+
+   .contact-number__sub-title {
+      margin-bottom: 18.5px;
    }
 }
 
@@ -1400,7 +1705,7 @@ h5 {
       padding-bottom: 10px;
    }
 
-   .introduce__info {
+   .introduce {
       padding-top: 30px;
    }
 
@@ -1410,6 +1715,10 @@ h5 {
       font-size: 25px;
    }
 
+   .trust {
+      padding-top: 10px;
+      padding-bottom: 10px;
+   }
    .trust__sub-caption {
       font-size: 15px;
    }
@@ -1420,6 +1729,25 @@ h5 {
    }
 
    .trust__number {
+      font-size: 20px;
+   }
+
+   .contact-number__title {
       font-size: 25px;
+   }
+
+   .contact-number__sub-title,
+   .contact-number__link {
+      font-size: 15px;
+   }
+
+   .contact-number__personal-data,
+   .contact-number__personal-data span {
+      font-size: 13px;
+   }
+
+   .contact-number__top {
+      padding-top: 10.5px;
+      margin-bottom: 13.4px;
    }
 }
