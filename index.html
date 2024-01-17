@@ -791,25 +791,27 @@
          </section>
          <section class="treatment">
             <div class="wrapper">
+               <div class="top treatment__top">
+                  <h2 class="top__title">Лечение у нас</h2>
+                  <div class="top__subtitle">
+                     Просто и безболезненно, с предоставлением всего спектра
+                     стоматологических услуг
+                  </div>
+               </div>
                <div class="treatment__wrapper">
                   <div class="treatment__left">
-                     <div class="treatment__top">
-                        <h2 class="treatment__title">Лечение у нас</h2>
-                     </div>
-                     <div class="treatment__sub-title">
-                        Просто и безболезненно, с предоставлением всего спектра
-                        стоматологических услуг
-                     </div>
-                     <div class="treatment__clinic-wrap">
-                        <div class="treatment__logo img-contain">
-                           <img src="img/icons/logo.svg" alt="" />
+                     <div class="treatment__clinic-top">
+                        <div class="treatment__clinic-wrap">
+                           <div class="treatment__logo img-contain">
+                              <img src="img/icons/logo.svg" alt="" />
+                           </div>
+                           <div class="treatment__clinic">клиника</div>
                         </div>
-                        <div class="treatment__clinic">клиника</div>
-                     </div>
 
-                     <div class="treatment__services">
-                        предоставляет весь спектр <br />стоматологических услуг
-                        таких как :
+                        <div class="treatment__services">
+                           предоставляет весь спектр <br />стоматологических
+                           услуг таких как :
+                        </div>
                      </div>
 
                      <div class="treatment__services-lists">
@@ -821,7 +823,9 @@
                         </div>
                         <div class="treatment__services-list">Ортопедия</div>
                      </div>
-                     <div class="treatment__caption">
+
+                     <!-- <div class="treatment__bottom"> -->
+                     <div class="treatment__description">
                         Приоритетным направлением является восстановление
                         функциональных возможностей зубочелюстной системы и
                         профилактика заболевания полости рта.
@@ -843,42 +847,60 @@
                            />
                         </div>
                      </div>
+                     <!-- </div> -->
                   </div>
                   <div class="treatment__gallery">
-                     <div class="swiper">
+                     <div class="treatment__arrows arrows">
+                        <div class="arrow arrow_prev">
+                           <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="30"
+                              height="30"
+                              viewBox="0 0 30 30"
+                              fill="none"
+                           >
+                              <path
+                                 d="M18.8494 4.49969L8.59668 14.7524L18.8494 25.0051L20.5592 23.2965L12.0138 14.7524L20.5592 6.20828L18.8494 4.49969Z"
+                                 fill="#2E3A59"
+                              />
+                           </svg>
+                        </div>
+                        <div class="arrow arrow_next">
+                           <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="30"
+                              height="30"
+                              viewBox="0 0 30 30"
+                              fill="none"
+                           >
+                              <path
+                                 d="M10.4592 25.0052L20.7119 14.7525L10.4592 4.49977L8.74942 6.20835L17.2947 14.7525L8.74941 23.2966L10.4592 25.0052Z"
+                                 fill="#2E3A59"
+                              />
+                           </svg>
+                        </div>
+                     </div>
+                     <div class="treatment__swiper swiper">
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper">
                            <!-- Slides -->
-                           <div class="swiper-slide">
+                           <div class="treatment__slide swiper-slide">
                               <img
                                  src="img/treatment/selfie-with-patient.png"
                                  alt=""
                               />
                            </div>
-                           <div class="swiper-slide">
+                           <div class="treatment__slide swiper-slide">
                               <img
                                  src="img/treatment/selfie-with-patient.png"
                                  alt=""
                               />
                            </div>
-                           <div class="swiper-slide">
+                           <div class="treatment__slide swiper-slide">
                               <img
                                  src="img/treatment/selfie-with-patient.png"
                                  alt=""
                               />
-                           </div>
-                        </div>
-
-                        <div class="swiper-button-next-custom">
-                           <div class="swiper-circle">
-                              <div class="diagonal-line-next"></div>
-                              <div class="diagonal-line-next"></div>
-                           </div>
-                        </div>
-                        <div class="swiper-button-prev-custom">
-                           <div class="swiper-circle">
-                              <div class="diagonal-line-prev"></div>
-                              <div class="diagonal-line-prev"></div>
                            </div>
                         </div>
                      </div>
@@ -889,20 +911,21 @@
 
          <section class="specialists">
             <div class="wrapper">
-               <div class="specialists__top">
-                  <h2 class="specialists__title">Специалисты</h2>
+               <div class="top specialists__top">
+                  <h2 class="top__title">Специалисты</h2>
+                  <div class="top__subtitle">
+                     Просто и безболезненно, с предоставлением всего спектра
+                     стоматологических услуг
+                  </div>
                </div>
-               <div class="specialists__sub-title">
-                  Просто и безболезненно, с предоставлением <br />всего спектра
-                  стоматологических услуг
-               </div>
+
                <div class="specialists__wrapper">
                   <div class="specialists__box">
                      <div class="specialists__left">
                         <div class="specialists__name">
                            Шац Дарья <br />Сергеевна
                         </div>
-                        <div class="specialists__position">
+                        <div class="specialists__value">
                            Директор, Главный врач , Врач ортодонт
                         </div>
                         <div class="specialists__experience">
@@ -919,7 +942,7 @@
                         <div class="specialists__name">
                            Оленина Марина <br />Николаевна
                         </div>
-                        <div class="specialists__position">
+                        <div class="specialists__value">
                            Зам директора, Врач стоматолог терапевт
                         </div>
                         <div class="specialists__experience">
@@ -936,7 +959,7 @@
                         <div class="specialists__name">
                            Лыщиков Павел Анатольевич
                         </div>
-                        <div class="specialists__position">
+                        <div class="specialists__value">
                            Врач стоматолог ортопед, хирург-имплантолог
                         </div>
                         <div class="specialists__experience">
@@ -953,7 +976,7 @@
                         <div class="specialists__name">
                            Лыщиков Павел Анатольевич
                         </div>
-                        <div class="specialists__position">
+                        <div class="specialists__value">
                            Врач стоматолог ортопед, хирург-имплантолог
                         </div>
                         <div class="specialists__experience">
@@ -970,7 +993,7 @@
                         <div class="specialists__name">
                            Лыщиков Павел Анатольевич
                         </div>
-                        <div class="specialists__position">
+                        <div class="specialists__value">
                            Врач стоматолог ортопед, хирург-имплантолог
                         </div>
                         <div class="specialists__experience">
@@ -980,6 +1003,79 @@
 
                      <div class="specialists__right male">
                         <img src="img/specialists/male-doctor.png" alt="" />
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <section class="certificates">
+            <div class="wrapper">
+               <div class="certificates__top">
+                  <div class="certificates__title">
+                     Сертификаты, награды и дипломы
+                  </div>
+               </div>
+
+               <div class="certificates__gallery">
+                  <div class="certificates__arrows arrows">
+                     <div class="arrow arrow_prev">
+                        <svg
+                           xmlns="http://www.w3.org/2000/svg"
+                           width="30"
+                           height="30"
+                           viewBox="0 0 30 30"
+                           fill="none"
+                        >
+                           <path
+                              d="M18.8494 4.49969L8.59668 14.7524L18.8494 25.0051L20.5592 23.2965L12.0138 14.7524L20.5592 6.20828L18.8494 4.49969Z"
+                              fill="#2E3A59"
+                           />
+                        </svg>
+                     </div>
+                     <div class="arrow arrow_next">
+                        <svg
+                           xmlns="http://www.w3.org/2000/svg"
+                           width="30"
+                           height="30"
+                           viewBox="0 0 30 30"
+                           fill="none"
+                        >
+                           <path
+                              d="M10.4592 25.0052L20.7119 14.7525L10.4592 4.49977L8.74942 6.20835L17.2947 14.7525L8.74941 23.2966L10.4592 25.0052Z"
+                              fill="#2E3A59"
+                           />
+                        </svg>
+                     </div>
+                  </div>
+                  <div class="certificates__swiper swiper">
+                     <!-- Additional required wrapper -->
+                     <div class="certif__swiper swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="certificates__slide swiper-slide">
+                           <img
+                              src="img/certificates-img/certificates.png"
+                              alt=""
+                           />
+                        </div>
+                        <div class="certificates__slide swiper-slide">
+                           <img
+                              src="img/certificates-img/certificates.png"
+                              alt=""
+                           />
+                        </div>
+                        <div class="certificates__slide swiper-slide">
+                           <img
+                              src="img/certificates-img/certificates.png"
+                              alt=""
+                           />
+                        </div>
+                        <div class="certificates__slide swiper-slide">
+                           <img
+                              src="img/certificates-img/certificates.png"
+                              alt=""
+                           />
+                        </div>
                      </div>
                   </div>
                </div>

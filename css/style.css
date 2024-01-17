@@ -67,6 +67,30 @@ h5 {
    margin: 0;
 }
 
+.top {
+   display: flex;
+   flex-direction: column;
+   max-width: 526px;
+   gap: 13.97px;
+}
+
+.top__title {
+   color: #12354b;
+   font-family: Panton;
+   font-size: 48px;
+
+   font-weight: 700;
+}
+
+.top__subtitle {
+   color: #737373;
+   max-width: 526px;
+   font-size: 24px;
+
+   font-weight: 400;
+   letter-spacing: 0.1px;
+}
+
 .main {
    overflow-x: hidden;
 }
@@ -101,6 +125,31 @@ h5 {
    padding-left: 15px;
    padding-right: 15px;
    margin: 0 auto;
+}
+
+.arrows {
+   display: flex;
+   gap: 20px;
+}
+
+.arrow {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 56px;
+   height: 56px;
+   border: 2px solid #2e3a59;
+   cursor: pointer;
+   transition: all 0.3s;
+   border-radius: 50%;
+}
+
+.arrow:hover {
+   background-color: #2e3a59;
+}
+
+.arrow:hover svg path {
+   fill: #fff;
 }
 
 .burger {
@@ -826,6 +875,7 @@ h5 {
 .treatment__wrapper {
    display: flex;
    justify-content: space-between;
+   align-items: flex-end;
 }
 
 .treatment__left {
@@ -835,34 +885,21 @@ h5 {
 }
 
 .treatment__top {
-   margin-bottom: 14px;
-}
-
-.treatment__title {
-   color: #12354b;
-   font-family: Panton;
-   font-size: 48px;
-
-   font-weight: 700;
-}
-
-.treatment__sub-title {
-   color: #737373;
-   max-width: 526px;
-   font-size: 24px;
-   margin-bottom: 64px;
-   font-weight: 400;
-   letter-spacing: 0.1px;
-}
-
-.treatment__clinic-wrap {
-   display: flex;
-   margin-bottom: 6.2px;
+   margin-bottom: 13px;
 }
 
 .treatment__logo {
    width: 57px;
    height: 52px;
+}
+
+.treatment__clinic-top {
+   margin-bottom: 59px;
+}
+
+.treatment__clinic-wrap {
+   display: flex;
+   margin-bottom: 6.22px;
 }
 
 .treatment__clinic {
@@ -879,7 +916,7 @@ h5 {
    color: #242424;
    letter-spacing: 0.2px;
    font-size: 20px;
-   margin-bottom: 59px;
+
    font-weight: 400;
 }
 
@@ -908,20 +945,27 @@ h5 {
 .treatment__services-list:nth-last-child(-n + 2) {
    margin-top: 32px;
 } */
-.treatment__caption {
+
+.treatment__bottom {
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+}
+.treatment__description {
    color: #242424;
 
    font-size: 20px;
    max-width: 581px;
    font-weight: 400;
    line-height: 118.425%; /* 23.685px */
-   margin-bottom: 12px;
 }
 
 .treatment__logotypes {
    display: flex;
    justify-content: space-between;
    align-items: center;
+   position: relative;
+   top: 13px;
 }
 
 .treatment__ortho {
@@ -939,11 +983,11 @@ h5 {
    height: 182px;
 }
 
-.swiper {
+.treatment__swiper {
    max-width: 872px;
 }
 
-.swiper-slide {
+.treatment__slide {
    max-width: 872px;
 }
 .swiper-slide img {
@@ -953,118 +997,32 @@ h5 {
 }
 
 .treatment__gallery {
-   display: flex;
-   justify-content: space-between;
    position: relative;
-   bottom: 31px;
-   align-items: flex-end;
+   bottom: 20px;
+   right: 8px;
 }
 
-.swiper-circle {
-   position: relative;
-   width: 56.129px;
-   height: 56.129px;
-   border: 2px solid #2e3a59;
-   border-radius: 50%;
-   overflow: hidden;
-}
-
-.diagonal-line-prev {
-   position: absolute;
-   width: 30%;
-   height: 2px;
-   background-color: #2e3a59;
-   top: 50%;
-   left: 50%;
-   transform-origin: top left;
-   transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.diagonal-line-prev:nth-child(2) {
-   transform: translate(-50%, -50%) rotate(-45deg);
-}
-
-.diagonal-line-next {
-   position: absolute;
-   width: 30%;
-   height: 2px;
-   background-color: #2e3a59;
-   top: 50%;
-   left: 50%;
-   transform-origin: top right;
-}
-
-.diagonal-line-next:nth-child(1) {
-   transform: translate(-50%, -50%) rotate(-45deg);
-}
-
-.diagonal-line-next:nth-child(2) {
-   transform: translate(-50%, -50%) rotate(45deg);
-}
-
-/* .treatment__gallery {
-   position: relative;
-} */
-
-/* .swiper-wrapper {
-   overflow: visible;
-}
-
-.swiper-slide {
-   position: relative;
-   z-index: 0;
-} */
-
-.swiper-button-next-custom,
-.swiper-button-prev-custom {
-   position: absolute;
-   top: 14px;
-   width: 40px;
-   height: 40px;
-
-   cursor: pointer;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   z-index: 1;
-}
-
-.swiper-button-next-custom {
-   right: 14px;
-}
-
-.swiper-button-prev-custom {
-   right: 66px;
+.treatment__arrows {
+   justify-content: flex-end;
+   margin-bottom: 14px;
 }
 
 .specialists {
-   margin-top: 89.9px;
+   margin-top: 104.9px;
    margin-bottom: 185.8px;
 }
 
 .specialists__top {
-   margin-bottom: 13.97px;
-}
-
-.specialists__title {
-   color: #12354b;
-   font-family: Panton;
-   font-size: 48px;
-
-   font-weight: 700;
-}
-.specialists__sub-title {
-   color: #737373;
-
-   font-size: 24px;
    margin-bottom: 72.94px;
-   font-weight: 400;
 }
 
 .specialists__left {
    display: flex;
    flex-direction: column;
    padding-top: 59px;
+   position: relative;
+   z-index: 10;
+   max-width: 50%;
 }
 
 .specialists__name {
@@ -1075,7 +1033,7 @@ h5 {
    font-weight: 700;
 }
 
-.specialists__position,
+.specialists__value,
 .specialists__experience {
    color: #3e3e3e;
 
@@ -1084,13 +1042,18 @@ h5 {
    font-weight: 400;
 }
 
-.specialists__position {
+.specialists__value {
    margin-bottom: 11.25px;
 }
 
 .specialists__right {
    margin-top: -18px;
    margin-left: 13px;
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   z-index: 1;
+   mix-blend-mode: darken;
 }
 .specialists__right img {
    width: 100%;
@@ -1101,6 +1064,7 @@ h5 {
 .specialists__right.female {
    width: 300.4px;
    height: 433.1px;
+   right: 45px;
 }
 
 .specialists__right.male {
@@ -1130,6 +1094,8 @@ h5 {
    border-radius: 4px;
    background: linear-gradient(255deg, #f7f8fa -0.59%, #eff0f4 100%);
    box-shadow: 0px 13px 50px 0px rgba(192, 192, 192, 0.2);
+   height: 415px;
+   position: relative;
 }
 
 /* .specialists__inner {
@@ -1151,6 +1117,52 @@ h5 {
 .specialists__right {
    z-index: 1;
 } */
+
+.certificates__top {
+   margin-bottom: 92.75px;
+}
+
+.certificates__title {
+   color: #12354b;
+   font-family: Panton;
+   font-size: 48px;
+
+   font-weight: 700;
+}
+
+.certificates__gallery {
+   position: relative;
+}
+
+.certificates__arrows {
+   display: flex;
+   justify-content: space-between;
+   position: absolute;
+   top: 50%;
+   left: -83px;
+   right: -83px;
+   transform: translateY(-50%);
+   z-index: 10;
+}
+
+.certificates__swiper {
+   max-width: 1650.7px;
+}
+.certificates__slide {
+   max-width: 1650.7px;
+}
+
+.certif__swiper {
+   display: flex;
+   gap: 18.5px;
+}
+
+@media (max-width: 1840px) {
+   .certificates__arrows {
+      left: 0px;
+      right: 0px;
+   }
+}
 
 @media (max-width: 1730px) {
    .header__container {
@@ -1219,7 +1231,7 @@ h5 {
       margin-right: 30px;
    }
 
-   .swiper {
+   .treatment__swiper {
       max-width: 757px;
    }
 }
@@ -1254,12 +1266,13 @@ h5 {
    .specialists__box {
       padding-left: 26.7px;
       padding-right: 0px;
+      width: calc(50% - 10px);
    }
 
    .specialists__wrapper {
       display: flex;
       flex-wrap: wrap;
-      gap: 40px 30px;
+      gap: 20px 20px;
    }
 }
 
@@ -1280,7 +1293,7 @@ h5 {
       max-width: none;
    }
 
-   .swiper {
+   .treatment__swiper {
       max-width: 695px;
    }
 
@@ -1296,14 +1309,40 @@ h5 {
 }
 
 @media (max-width: 1350px) {
-   .swiper {
+   .treatment__swiper {
       max-width: 600px;
+   }
+
+   .specialists__name {
+      font-size: 32px;
+   }
+
+   .specialists__value,
+   .specialists__experience {
+      font-size: 18px;
+   }
+
+   .specialists__left {
+      padding-top: 40px;
+   }
+
+   .specialists__box {
+      height: 340px;
    }
 }
 
 @media (max-width: 1250px) {
    .treatment__wrapper {
       flex-direction: column;
+      align-items: stretch;
+   }
+
+   .treatment__swiper {
+      max-width: 100%;
+   }
+
+   .treatment__slide {
+      max-width: none;
    }
 
    .treatment__left {
@@ -1326,9 +1365,12 @@ h5 {
       bottom: 0px;
    }
 
-   .treatment__sub-title {
-      margin-bottom: 40px;
+   .treatment__subtitle {
       max-width: none;
+   }
+
+   .treatment__top {
+      margin-bottom: 40px;
    }
 
    .treatment__services {
@@ -1340,12 +1382,20 @@ h5 {
       max-width: none;
    }
 
+   .contact-number__shell {
+      margin-top: 0;
+   }
+
    .specialists__box {
-      width: 80%;
+      width: 100%;
    }
 
    .specialists__wrapper {
-      gap: 25px 30px;
+      gap: 20px 20px;
+   }
+
+   .certif__swiper {
+      gap: 7.5px;
    }
 }
 
@@ -1504,8 +1554,11 @@ h5 {
    }
 
    .contact-number__shell {
-      margin-top: 90px;
       margin-bottom: 110px;
+   }
+
+   .certificates__top {
+      margin-bottom: 50.75px;
    }
 }
 
@@ -1765,7 +1818,6 @@ h5 {
    }
 
    .contact-number__shell {
-      margin-top: 50px;
       margin-bottom: 60px;
    }
 
@@ -1785,16 +1837,49 @@ h5 {
       font-size: 18px;
    }
 
+   .treatment__clinic-top {
+      margin-bottom: 20px;
+   }
+
+   .treatment__services-list:nth-child(-n + 3) {
+      margin-bottom: 10px;
+   }
+
+   .treatment__services-lists {
+      margin-bottom: 30px;
+      gap: 0 40px;
+   }
+
+   .treatment__description {
+      font-size: 18px;
+   }
+
+   .treatment__top {
+      margin-bottom: 30px;
+   }
+
+   .arrow {
+      width: 46px;
+      height: 46px;
+   }
+
+   .treatment__services-list {
+      font-size: 18px;
+   }
+
    .img-contain img {
       width: 80%;
    }
 
-   .specialists__title {
+   .top__title {
       font-size: 37px;
    }
 
-   .specialists__sub-title {
+   .top__subtitle {
       font-size: 18px;
+   }
+
+   .specialists__top {
       margin-bottom: 40px;
    }
 
@@ -1802,13 +1887,30 @@ h5 {
       font-size: 30px;
    }
 
-   .specialists__position,
+   .specialists__value,
    .specialists__experience {
       font-size: 18px;
    }
 
+   .specialists {
+      margin-top: 20.9px;
+      margin-bottom: 80.8px;
+   }
+
    .specialists__box {
       width: 100%;
+   }
+
+   .certif__swiper {
+      gap: 0px;
+   }
+
+   .certificates__title {
+      font-size: 37px;
+   }
+
+   .certificates__top {
+      margin-bottom: 30.75px;
    }
 }
 
@@ -1935,17 +2037,28 @@ h5 {
 }
 
 @media (max-width: 600px) {
-   .specialists__right {
-      display: none;
-   }
-
    .specialists__left {
       padding: 30px;
+      max-width: 100%;
    }
 
-   /* .specialists__box {
-      justify-content: center;
-   } */
+   .specialists__box {
+      height: auto;
+      flex-direction: column;
+   }
+   .specialists__right {
+      position: relative;
+   }
+   .specialists__right.female {
+      width: 100%;
+      height: auto;
+      padding: 0 20%;
+   }
+   .specialists__right.male {
+      width: 100%;
+      height: auto;
+      padding: 0;
+   }
 }
 
 @media (max-width: 546px) {
@@ -2133,7 +2246,6 @@ h5 {
    }
 
    .contact-number__shell {
-      margin-top: 30px;
       margin-bottom: 40px;
       padding-top: 10px;
       padding-bottom: 10px;
@@ -2149,6 +2261,10 @@ h5 {
       font-size: 17px;
    }
 
+   .treatment__description {
+      font-size: 17px;
+   }
+
    .treatment__rocada {
       width: 181px;
       height: 110px;
@@ -2156,26 +2272,44 @@ h5 {
 
    .treatment {
       padding-top: 30px;
+      padding-bottom: 40px;
    }
 
    .treatment__services-list:nth-child(-n + 5) {
       margin-bottom: 15px;
    }
 
-   .treatment__services-lists {
-      flex-direction: column;
-   }
-
    .treatment__services-list {
-      font-size: 18px;
+      font-size: 15px;
    }
 
-   .specialists__title {
+   .treatment__services-lists {
+      margin-bottom: 20px;
+      gap: 0 15px;
+   }
+
+   .treatment__clinic-top {
+      margin-bottom: 10px;
+   }
+
+   .arrow {
+      width: 36px;
+      height: 36px;
+   }
+
+   .treatment__arrows {
+      margin-bottom: 9px;
+   }
+
+   .top__title {
       font-size: 30px;
    }
 
-   .specialists__sub-title {
+   .top__subtitle {
       font-size: 17px;
+   }
+
+   .specialists__top {
       margin-bottom: 20px;
    }
 
@@ -2183,7 +2317,7 @@ h5 {
       font-size: 24px;
    }
 
-   .specialists__position,
+   .specialists__value,
    .specialists__experience {
       font-size: 15px;
    }
@@ -2203,6 +2337,14 @@ h5 {
 
    .specialists__wrapper {
       gap: 15px 30px;
+   }
+
+   .certificates__title {
+      font-size: 30px;
+   }
+
+   .certificates__top {
+      margin-bottom: 15.75px;
    }
 }
 
@@ -2315,7 +2457,6 @@ h5 {
    }
 
    .contact-number__shell {
-      margin-top: 20px;
       margin-bottom: 20px;
       padding-top: 0px;
       padding-bottom: 0px;
@@ -2335,20 +2476,22 @@ h5 {
       margin-bottom: 10px;
    }
 
-   .treatment__sub-title {
+   .treatment__description {
+      font-size: 15px;
+   }
+
+   .treatment__top {
       margin-bottom: 22px;
    }
 
    .treatment {
       padding-top: 15px;
+      padding-bottom: 30px;
    }
 
    .treatment__services {
       margin-bottom: 20px;
-   }
-
-   .treatment__services-list {
-      font-size: 17px;
+      font-size: 15px;
    }
 
    .treatment__services-list:nth-child(-n + 5) {
@@ -2360,22 +2503,46 @@ h5 {
       height: 84px;
    }
 
-   .specialists__title {
+   .top__title {
       font-size: 27px;
    }
 
-   .specialists__sub-title {
+   .top__subtitle {
       font-size: 16px;
+   }
+
+   .arrow {
+      width: 30px;
+      height: 30px;
+   }
+
+   .treatment__arrows {
+      margin-bottom: 6px;
+   }
+   .specialists {
+      margin-top: 15.9px;
+      margin-bottom: 30.8px;
+   }
+   .specialists__top {
       margin-bottom: 17px;
+      margin-top: 15px;
    }
 
    .specialists__name {
       font-size: 21px;
    }
 
-   .specialists__position,
+   .specialists__value,
    .specialists__experience {
       font-size: 14px;
+   }
+
+   .certificates__title {
+      font-size: 27px;
+   }
+
+   .certificates__top {
+      margin-bottom: 10.75px;
    }
 }
 
@@ -2439,18 +2606,36 @@ h5 {
       font-size: 25px;
    }
 
+   .treatment__description {
+      font-size: 14px;
+   }
+   .treatment__services {
+      font-size: 14px;
+   }
+
+   .arrow {
+      width: 25px;
+      height: 25px;
+   }
+
+   .treatment__arrows {
+      margin-bottom: 4px;
+   }
+
    .treatment__sub-title,
-   .treatment__services,
    .treatment__caption {
       font-size: 15px;
    }
 
-   .specialists__title {
+   .top__title {
       font-size: 25px;
    }
 
-   .specialists__sub-title {
+   .top__subtitle {
       font-size: 15px;
+   }
+
+   .specialists__top {
       margin-bottom: 13px;
    }
 
@@ -2458,12 +2643,16 @@ h5 {
       font-size: 19px;
    }
 
-   .specialists__position,
+   .specialists__value,
    .specialists__experience {
       font-size: 13px;
    }
 
    .specialists__wrapper {
       gap: 10px 30px;
+   }
+
+   .certificates__title {
+      font-size: 25px;
    }
 }
