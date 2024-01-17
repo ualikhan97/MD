@@ -229,9 +229,11 @@ h5 {
    margin-left: 58px;
 }
 
-.header__socials {
+.socials {
    display: flex;
+}
 
+.socials__header {
    gap: 15px;
 }
 
@@ -1157,6 +1159,64 @@ h5 {
    gap: 18.5px;
 }
 
+.contact-number__shell.contact-number__shell_margin {
+   margin-top: 207px;
+   margin-bottom: 56.8px;
+}
+
+.contact-number__dentist.contact-number__dentist_size {
+   width: 764.1px;
+   height: 695.7px;
+   margin-top: -192px;
+}
+
+.socials__footer {
+   gap: 34.36px;
+}
+
+.socials__footer a {
+   width: 45px;
+   height: 45px;
+}
+
+.footer {
+   margin-bottom: 57px;
+}
+
+.footer__wrapper {
+   display: flex;
+   justify-content: space-between;
+}
+
+.footer__license {
+   color: #000;
+   text-align: center;
+   max-width: 643.7px;
+   font-size: 15px;
+   margin-left: 192px;
+   line-height: 145.49%; /* 21.824px */
+}
+
+.footer__personal-data {
+   color: #000;
+
+   font-size: 15px;
+   max-width: 239.5px;
+   line-height: 145.49%; /* 21.824px */
+   text-decoration-line: underline;
+   transition: all 0.3s;
+   cursor: pointer;
+}
+.footer__personal-data:hover {
+   text-decoration: none;
+   color: #737373;
+}
+
+.footer__logo {
+   width: 58px;
+   height: 52px;
+}
+
 @media (max-width: 1840px) {
    .certificates__arrows {
       left: 0px;
@@ -1188,7 +1248,7 @@ h5 {
       margin-left: 35px;
    }
 
-   .header__socials {
+   .socials__header {
       gap: 16px;
    }
 
@@ -1205,12 +1265,16 @@ h5 {
       margin-left: 0;
    }
 
-   .header__socials {
+   .socials__header {
       gap: 10px;
    }
 
    .header__menu {
       margin-left: 35px;
+   }
+
+   .footer__license {
+      margin-left: 0;
    }
 }
 @media (max-width: 1580px) {
@@ -1397,10 +1461,31 @@ h5 {
    .certif__swiper {
       gap: 7.5px;
    }
+
+   .socials__footer {
+      gap: 15px;
+   }
+
+   .socials__footer a {
+      width: 30px;
+      height: 30px;
+   }
+
+   .contact-number__shell.contact-number__shell_margin {
+      margin-bottom: 40.8px;
+   }
+
+   .footer__license {
+      width: 300px;
+   }
+
+   .footer {
+      margin-bottom: 40px;
+   }
 }
 
 @media (max-width: 1100px) {
-   .header__socials {
+   .socials__header {
       display: none;
    }
    /* .introduce {
@@ -1560,6 +1645,10 @@ h5 {
    .certificates__top {
       margin-bottom: 50.75px;
    }
+
+   .contact-number__shell.contact-number__shell_margin {
+      margin-top: 140px;
+   }
 }
 
 @media (max-width: 890px) {
@@ -1611,6 +1700,31 @@ h5 {
    .trust {
       padding-top: 80px;
       padding-bottom: 80px;
+   }
+}
+
+@media (max-width: 810px) {
+   .footer__wrapper {
+      flex-direction: column;
+      gap: 30px;
+   }
+
+   .contact-number__shell.contact-number__shell_margin {
+      margin-bottom: 10.8px;
+   }
+
+   .footer__wrapper {
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+   }
+
+   .footer__license {
+      width: auto;
+   }
+
+   .footer {
+      margin-bottom: 30px;
    }
 }
 @media (max-width: 768px) {
@@ -1911,6 +2025,18 @@ h5 {
 
    .certificates__top {
       margin-bottom: 30.75px;
+   }
+
+   .footer__wrapper {
+      gap: 12px;
+   }
+
+   .socials__footer {
+      gap: 8px;
+   }
+
+   .contact-number__shell.contact-number__shell_margin {
+      margin-top: 110px;
    }
 }
 
@@ -2346,6 +2472,18 @@ h5 {
    .certificates__top {
       margin-bottom: 15.75px;
    }
+
+   .contact-number__shell.contact-number__shell_margin {
+      margin-top: 50px;
+   }
+
+   .footer__license {
+      text-align: start;
+   }
+
+   .footer {
+      margin-bottom: 20px;
+   }
 }
 
 @media (max-width: 376px) {
@@ -2544,6 +2682,30 @@ h5 {
    .certificates__top {
       margin-bottom: 10.75px;
    }
+
+   .contact-number__shell.contact-number__shell_margin {
+      margin-top: 30px;
+   }
+
+   .footer__wrapper {
+      gap: 10px;
+   }
+
+   .footer__license {
+      font-size: 13px;
+   }
+
+   .footer__personal-data {
+      font-size: 13px;
+   }
+
+   .socials__footer a {
+      width: 25px;
+      height: 25px;
+   }
+   .socials__footer {
+      gap: 5px;
+   }
 }
 
 @media (max-width: 321px) {
@@ -2654,5 +2816,9 @@ h5 {
 
    .certificates__title {
       font-size: 25px;
+   }
+
+   .contact-number__shell.contact-number__shell_margin {
+      margin-top: 20px;
    }
 }
