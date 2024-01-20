@@ -130,37 +130,30 @@ const swiper = new Swiper(".treatment__swiper", {
 });
 const certificatesSwiper = new Swiper(".certificates__swiper", {
    // Optional parameters
-   direction: "horizontal",
+
    loop: true,
    // slidesPerView: 3,
-   freeMode: true,
 
    breakpoints: {
       // when window width is less than 1250px
       0: {
-         slidesPerView: 1,
+         slidesPerView: 1.1,
+         spaceBetween: 8,
       },
       769: {
          slidesPerView: 2,
+         spaceBetween: 12,
       },
       // when window width is 1250px or more
       1250: {
          slidesPerView: 3,
+         spaceBetween: 18.5,
       },
-   },
-   // If we need pagination
-   pagination: {
-      el: ".swiper-pagination",
    },
 
    // Navigation arrows
    navigation: {
       nextEl: ".certificates__gallery .arrow_next",
       prevEl: ".certificates__gallery .arrow_prev",
-   },
-
-   // And if we need scrollbar
-   scrollbar: {
-      el: ".swiper-scrollbar",
    },
 });

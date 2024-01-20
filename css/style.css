@@ -142,6 +142,7 @@ h5 {
    cursor: pointer;
    transition: all 0.3s;
    border-radius: 50%;
+   background: #fff;
 }
 
 .arrow:hover {
@@ -1066,7 +1067,7 @@ h5 {
 .specialists__right.female {
    width: 300.4px;
    height: 433.1px;
-   right: 45px;
+   right: 0;
 }
 
 .specialists__right.male {
@@ -1120,16 +1121,13 @@ h5 {
    z-index: 1;
 } */
 
-.certificates__top {
-   margin-bottom: 92.75px;
-}
-
 .certificates__title {
    color: #12354b;
    font-family: Panton;
    font-size: 48px;
 
    font-weight: 700;
+   margin-bottom: 92.75px;
 }
 
 .certificates__gallery {
@@ -1151,12 +1149,7 @@ h5 {
    max-width: 1650.7px;
 }
 .certificates__slide {
-   max-width: 1650.7px;
-}
-
-.certif__swiper {
-   display: flex;
-   gap: 18.5px;
+   border: 1px solid #bfbfbf;
 }
 
 .contact-number__shell.contact-number__shell_margin {
@@ -1219,8 +1212,8 @@ h5 {
 
 @media (max-width: 1840px) {
    .certificates__arrows {
-      left: 0px;
-      right: 0px;
+      left: -10px;
+      right: -10px;
    }
 }
 
@@ -1458,10 +1451,6 @@ h5 {
       gap: 20px 20px;
    }
 
-   .certif__swiper {
-      gap: 7.5px;
-   }
-
    .socials__footer {
       gap: 15px;
    }
@@ -1641,13 +1630,16 @@ h5 {
    .contact-number__shell {
       margin-bottom: 110px;
    }
-
+   /*
    .certificates__top {
+   } */
+
+   .certificates__title {
       margin-bottom: 50.75px;
    }
 
    .contact-number__shell.contact-number__shell_margin {
-      margin-top: 140px;
+      margin-top: 100px;
    }
 }
 
@@ -2015,15 +2007,8 @@ h5 {
       width: 100%;
    }
 
-   .certif__swiper {
-      gap: 0px;
-   }
-
    .certificates__title {
       font-size: 37px;
-   }
-
-   .certificates__top {
       margin-bottom: 30.75px;
    }
 
@@ -2036,7 +2021,11 @@ h5 {
    }
 
    .contact-number__shell.contact-number__shell_margin {
-      margin-top: 110px;
+      margin-top: 80px;
+   }
+
+   .certificates__swiper {
+      overflow: visible;
    }
 }
 
@@ -2047,6 +2036,10 @@ h5 {
 
    .introduce {
       padding-bottom: 50px;
+   }
+
+   .contact-number__shell.contact-number__shell_margin {
+      margin-top: 60px;
    }
 }
 
@@ -2467,9 +2460,6 @@ h5 {
 
    .certificates__title {
       font-size: 30px;
-   }
-
-   .certificates__top {
       margin-bottom: 15.75px;
    }
 
@@ -2677,9 +2667,6 @@ h5 {
 
    .certificates__title {
       font-size: 27px;
-   }
-
-   .certificates__top {
       margin-bottom: 10.75px;
    }
 
